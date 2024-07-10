@@ -43,6 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Welcome"
+                android:layout_marginTop="15dp"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/EntNameTV"
@@ -52,18 +53,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_chainStyle="spread" />
 
-            <TextView
-                android:id="@+id/EntNameTV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Please enter your name"
-                android:textSize="15sp"
-                app:layout_constraintBottom_toTopOf="@+id/editTV"
-                app:layout_constraintHorizontal_bias="0.516"
-                app:layout_constraintLeft_toLeftOf="@id/welcTv"
-                app:layout_constraintRight_toRightOf="@id/welcTv"
-                app:layout_constraintTop_toBottomOf="@+id/welcTv" />
+
+            <!--
 
             <EditText
                 android:id="@+id/editTV"
@@ -78,29 +69,55 @@
                 app:layout_constraintRight_toRightOf="@id/EntNameTV"
                 app:layout_constraintTop_toBottomOf="@+id/EntNameTV" />
 
+            -->
+
+            <TextView
+                android:id="@+id/EntNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Please enter your name"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/editTV"
+                app:layout_constraintHorizontal_bias="0.516"
+                app:layout_constraintLeft_toLeftOf="@id/welcTv"
+                app:layout_constraintRight_toRightOf="@id/welcTv"
+                app:layout_constraintTop_toBottomOf="@+id/welcTv" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editTV"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintLeft_toLeftOf="@id/EntNameTV"
+                app:layout_constraintRight_toRightOf="@id/EntNameTV"
+                app:layout_constraintTop_toBottomOf="@id/EntNameTV">
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/edName"
+                    android:layout_height="wrap_content"
+                    android:hint="Name" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/appCompatButton"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:text="START"
                 android:backgroundTint="#66D45A"
+                android:text="START"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintLeft_toLeftOf="@id/editTV"
                 app:layout_constraintRight_toRightOf="@id/editTV"
-                app:layout_constraintTop_toBottomOf="@+id/editTV" />
+                app:layout_constraintTop_toBottomOf="@+id/editTV"
+                app:layout_constraintVertical_bias="0.369" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
-
-
-
 
     </androidx.cardview.widget.CardView>
 
